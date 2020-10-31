@@ -28,7 +28,7 @@ class KakaoAuthView(TemplateView):
         url = "https://kauth.kakao.com/oauth/token"
         payload = "grant_type=authorization_code"
         payload += "&client_id=" + client_id
-        payload += "&redirect_url=http://192.168.0.107:8000/kakao/oauth&code=" + code #redirect url
+        payload += "&redirect_url=http://192.168.43.60:8000/kakao/oauth&code=" + code #redirect url
     
         headers = {
             'Content-Type': "application/x-www-form-urlencoded",

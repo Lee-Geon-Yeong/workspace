@@ -3,8 +3,8 @@ import json
 import requests
 class KaKaoTalkForm(forms.Form):
     text = forms.CharField(label='전송할 Talk', max_length=300)
-    web_url = forms.CharField(label='Web URL', max_length=300, initial='http://192.168.0.107:8000/mjpeg?mode=stream')
-    mobile_web_url = forms.CharField(label='Mobile URL', max_length=300, initial='http://192.168.0.107:8000/mjpeg?mode=stream')
+    web_url = forms.CharField(label='Web URL', max_length=300, initial='http://192.168.43.60:8000/mjpeg?mode=stream')
+    mobile_web_url = forms.CharField(label='Mobile URL', max_length=300, initial='http://192.168.43.60:8000/mjpeg?mode=stream')
     def send_talk(self):
         talk_url = "https://kapi.kakao.com/v2/api/talk/memo/default/send"
         with open("access_token.txt", "r") as f:
